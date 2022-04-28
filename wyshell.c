@@ -144,16 +144,15 @@ int main()
             case PIPE:
                 if (fork() == 0)
                 {
-                    if (amp != 1)
-                {
-                    wait(NULL);
-                }
                     int status_code = execvp(current->command, arguments);
                     if (status_code == -1)
                     {
                         printf("Terminated Incorrectly\n");
                     }
-                    
+                    if (amp == 1)
+                    {
+                        return 0;
+                    }
                 }
 
                 prevUse = 1;
@@ -161,14 +160,14 @@ int main()
             case SEMICOLON:
                 if (fork() == 0)
                 {
-                    if (amp != 1)
-                {
-                    wait(NULL);
-                }
                     int status_code = execvp(current->command, arguments);
                     if (status_code == -1)
                     {
                         printf("Terminated Incorrectly\n");
+                    }
+                    if (amp == 1)
+                    {
+                        return 0;
                     }
                 }
 
