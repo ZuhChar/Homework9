@@ -149,11 +149,12 @@ int main()
                     {
                         printf("Terminated Incorrectly\n");
                     }
+                    if (amp == 0)
+                    {
+                        return 0;
+                    }
                 }
-                if (amp == 1)
-                {
-                    wait(NULL);
-                }
+
                 prevUse = 1;
                 break;
             case SEMICOLON:
@@ -164,11 +165,12 @@ int main()
                     {
                         printf("Terminated Incorrectly\n");
                     }
+                    if (amp == 0)
+                    {
+                        return 0;
+                    }
                 }
-                if (amp == 1)
-                {
-                    wait(NULL);
-                }
+
                 prevUse = 1;
                 break;
             case ERROR_CHAR:
@@ -199,11 +201,11 @@ int main()
                 {
                     printf("Terminated Incorrectly\n");
                 }
+                if (amp == 0)
+                {
+                    return 0;
+                }
             }
-        }
-        if (amp == 1)
-        {
-            wait(NULL);
         }
         /*
             First attempt at printing the output
