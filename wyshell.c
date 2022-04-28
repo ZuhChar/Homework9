@@ -185,10 +185,10 @@ int main()
             default:
                 break;
             }
-            if (amp != 1)
-            {
-                wait(NULL);
-            }
+            // if (amp != 1)
+            // {
+            //     wait(NULL);
+            // }
             rtn = parse_line(NULL);
             if (eol == 1)
             {
