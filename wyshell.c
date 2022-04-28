@@ -92,8 +92,8 @@ int main()
             switch (rtn)
             {
             case WORD:
-                char* arguments[10];
-                int n;
+                char* arguments[] = {NULL};
+                int n = 10;
                 if (Head == NULL)
                 {
                     Head = calloc(1, sizeof(Node));
