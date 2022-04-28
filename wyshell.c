@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "wyscanner.h"
 
 struct word
@@ -112,7 +113,14 @@ int main()
                     addToList(lexeme, current);
                     // printf("Command added to list");
                 }
-                if(lexeme == )
+                if(fork() == 0)
+                {
+                    int status_code = execvp(lexeme, arg_list);
+                    if(status_code == -1)
+                    {
+                        printf("Terminated Incorrectly\n");s
+                    }
+                }
                 // commands = head;
                 break;
             case REDIR_OUT:
