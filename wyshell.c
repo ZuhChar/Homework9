@@ -181,10 +181,6 @@ int main()
             // {
             //     wait(NULL);
             // }
-            if (amp != 1)
-            {
-                wait(NULL);
-            }
             rtn = parse_line(NULL);
             if (eol == 1)
             {
@@ -217,6 +213,14 @@ int main()
                 commands = commands->next;
             }
             */
+        if (amp != 1)
+        {
+            wait(NULL);
+        }
+        else
+        {
+            amp = 1;
+        }
         current = Head;
         Node *tmp;
         free_command(current);
