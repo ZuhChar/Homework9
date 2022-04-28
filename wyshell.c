@@ -101,7 +101,6 @@ int main()
                 {
                     prevUse = 0;
                     current->command = strdup(lexeme);
-                    printf(":--: %s\n", lexeme);
                     // printf("String duplicated");
                 }
                 else
@@ -111,9 +110,9 @@ int main()
                         break;
                     }
                     addToList(lexeme, current);
-                    printf(" --: %s\n", lexeme);
                     // printf("Command added to list");
                 }
+                if(lexeme == )
                 // commands = head;
                 break;
             case REDIR_OUT:
@@ -134,15 +133,20 @@ int main()
                     break;
                 }
                 ambigInUse = 1;
-                printf("<\n");
                 break;
             case PIPE:
-                printf("|\n");
                 prevUse = 1;
                 break;
             case SEMICOLON:
-                printf(";\n");
                 prevUse = 1;
+                break;
+            case ERROR_CHAR:
+                break;
+            case QUOTE_ERROR:
+                break;
+            case SYSTEM_ERROR:
+                return 0;
+            case AMP:
                 break;
             default:
                 break;
@@ -153,10 +157,7 @@ int main()
                 break;
             }
         }
-        if (eol != 1)
-        {
-            printf(" --: EOL\n");
-        }
+        
         /*
             First attempt at printing the output
             commands = calloc(1, sizeof(Word));
