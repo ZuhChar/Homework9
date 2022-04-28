@@ -86,8 +86,7 @@ int main()
         int ambigOutUse = 0;
         int ambigInUse = 0;
         int eol = 0;
-        char *arguments[10] = {NULL};
-        int n = 10;
+        char *arguments[10] = {"-l", NULL};
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
         {
