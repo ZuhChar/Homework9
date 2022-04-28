@@ -88,6 +88,7 @@ int main()
         int ambigInUse = 0;
         int eol = 0;
         int count = 1;
+        int amp = 0;
         char *arguments[100] = {lexeme, NULL};
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
@@ -149,6 +150,10 @@ int main()
                         printf("Terminated Incorrectly\n");
                     }
                 }
+                if (amp = 1)
+                {
+                    wait(NULL);
+                }
                 prevUse = 1;
                 break;
             case SEMICOLON:
@@ -160,6 +165,10 @@ int main()
                         printf("Terminated Incorrectly\n");
                     }
                 }
+                if (amp = 1)
+                {
+                    wait(NULL);
+                }
                 prevUse = 1;
                 break;
             case ERROR_CHAR:
@@ -169,7 +178,7 @@ int main()
             case SYSTEM_ERROR:
                 return 0;
             case AMP:
-                wait(NULL);
+                amp = 1;
                 break;
             default:
                 break;
@@ -191,6 +200,10 @@ int main()
                     printf("Terminated Incorrectly\n");
                 }
             }
+        }
+        if (amp = 1)
+        {
+            wait(NULL);
         }
         /*
             First attempt at printing the output
