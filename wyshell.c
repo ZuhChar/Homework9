@@ -181,6 +181,10 @@ int main()
             // {
             //     wait(NULL);
             // }
+            if (amp != 1)
+            {
+                wait(NULL);
+            }
             rtn = parse_line(NULL);
             if (eol == 1)
             {
@@ -197,10 +201,6 @@ int main()
                 if (status_code == -1)
                 {
                     printf("Terminated Incorrectly\n");
-                }
-                if (amp != 1)
-                {
-                    wait(NULL);
                 }
             }
         }
