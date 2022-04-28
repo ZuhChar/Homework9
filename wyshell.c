@@ -88,7 +88,7 @@ int main()
         int ambigInUse = 0;
         int eol = 0;
         int count = 1;
-        int amp = 0;
+        int amp = 1;
         char *arguments[100] = {lexeme, NULL};
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
