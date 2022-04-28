@@ -149,7 +149,7 @@ int main()
                     {
                         printf("Terminated Incorrectly\n");
                     }
-                    if (amp == 1)
+                    if (amp == 0)
                     {
                         return 0;
                     }
@@ -165,7 +165,7 @@ int main()
                     {
                         printf("Terminated Incorrectly\n");
                     }
-                    if (amp == 1)
+                    if (amp == 0)
                     {
                         return 0;
                     }
