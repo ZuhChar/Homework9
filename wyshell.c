@@ -87,7 +87,7 @@ int main()
         int ambigInUse = 0;
         int eol = 0;
         int count = 1;
-        char *arguments[100] = {lexeme, NULL};
+        char *arguments[100] = {current->command, NULL};
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
         {
@@ -109,7 +109,7 @@ int main()
                 else
                 {
                     arguments[count] = lexeme;
-                    arguments[count + 2] = arguments[count + 1]; 
+                    arguments[count + 2] = arguments[count + 1];
                     count++;
                     if (eol == 1)
                     {
@@ -140,9 +140,25 @@ int main()
                 ambigInUse = 1;
                 break;
             case PIPE:
+                if (fork() == 0)
+                {
+                    int status_code = execvp(current->command, arguments);
+                    if (status_code == -1)
+                    {
+                        printf("Terminated Incorrectly\n");
+                    }
+                }
                 prevUse = 1;
                 break;
             case SEMICOLON:
+                if (fork() == 0)
+                {
+                    int status_code = execvp(current->command, arguments);
+                    if (status_code == -1)
+                    {
+                        printf("Terminated Incorrectly\n");
+                    }
+                }
                 prevUse = 1;
                 break;
             case ERROR_CHAR:
@@ -163,12 +179,15 @@ int main()
             }
         }
         // Create a child to run the command in
-        if (fork() == 0)
+        if (prevUse = 0)
         {
-            int status_code = execvp(current->command, arguments);
-            if (status_code == -1)
+            if (fork() == 0)
             {
-                printf("Terminated Incorrectly\n");
+                int status_code = execvp(current->command, arguments);
+                if (status_code == -1)
+                {
+                    printf("Terminated Incorrectly\n");
+                }
             }
         }
         /*
