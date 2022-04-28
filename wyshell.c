@@ -206,7 +206,7 @@ int main()
                 {
                     printf("Terminated Incorrectly\n");
                 }
-                if (amp == 1)
+                if (amp != 1)
                 {
                     return 0;
                 }
