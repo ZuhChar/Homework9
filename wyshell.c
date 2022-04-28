@@ -168,6 +168,7 @@ int main()
             case SYSTEM_ERROR:
                 return 0;
             case AMP:
+                wait(NULL);
                 break;
             default:
                 break;
