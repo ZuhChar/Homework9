@@ -150,7 +150,11 @@ int main()
                         printf("Terminated Incorrectly\n");
                     }
                 }
-
+                //Remove if breaks pipe delay
+                if (amp != 1)
+                {
+                    wait(NULL);
+                }
                 prevUse = 1;
                 break;
             case SEMICOLON:
@@ -162,7 +166,11 @@ int main()
                         printf("Terminated Incorrectly\n");
                     }
                 }
-
+                // Remove if breaks pipe delay
+                if (amp != 1)
+                {
+                    wait(NULL);
+                }
                 prevUse = 1;
                 break;
             case ERROR_CHAR:
