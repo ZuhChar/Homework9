@@ -86,7 +86,7 @@ int main()
         int ambigOutUse = 0;
         int ambigInUse = 0;
         int eol = 0;
-        char *arguments[1] = {lexeme, NULL};
+        char *arguments[2] = {lexeme, NULL};
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
         {
@@ -107,7 +107,6 @@ int main()
                 }
                 else
                 {
-                    arguments[end] = lexeme;
                     if (eol == 1)
                     {
                         break;
