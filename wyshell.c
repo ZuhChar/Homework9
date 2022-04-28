@@ -217,10 +217,6 @@ int main()
         {
             wait(NULL);
         }
-        else
-        {
-            amp = 1;
-        }
         current = Head;
         Node *tmp;
         free_command(current);
