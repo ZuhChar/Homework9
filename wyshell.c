@@ -200,7 +200,7 @@ int main()
                 }
                 if (amp != 1)
                 {
-                    pid_t stop = wait(NULL);
+                    wait(NULL);
                 }
             }
         }
