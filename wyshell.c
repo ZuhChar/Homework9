@@ -88,7 +88,7 @@ int main()
         int ambigInUse = 0;
         int eol = 0;
         int count = 1;
-        int amp = 0;
+        int amp = 1;
         char *arguments[100] = {lexeme, NULL};
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
@@ -149,7 +149,7 @@ int main()
                     {
                         printf("Terminated Incorrectly\n");
                     }
-                    if (amp == 1)
+                    if (amp == 0)
                     {
                         return 0;
                     }
@@ -165,7 +165,7 @@ int main()
                     {
                         printf("Terminated Incorrectly\n");
                     }
-                    if (amp == 1)
+                    if (amp == 0)
                     {
                         return 0;
                     }
@@ -180,7 +180,7 @@ int main()
             case SYSTEM_ERROR:
                 return 0;
             case AMP:
-                amp = 1;
+                amp = 0;
                 break;
             default:
                 break;
@@ -190,7 +190,7 @@ int main()
             {
                 break;
             }
-            if(amp == 0){
+            if(amp == 1){
                 wait(NULL);
             }
         }
@@ -204,7 +204,7 @@ int main()
                 {
                     printf("Terminated Incorrectly\n");
                 }
-                if (amp == 1)
+                if (amp == 0)
                 {
                     return 0;
                 }
