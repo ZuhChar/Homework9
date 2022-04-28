@@ -92,6 +92,8 @@ int main()
             switch (rtn)
             {
             case WORD:
+                char *arguments[];
+                int n;
                 if (Head == NULL)
                 {
                     Head = calloc(1, sizeof(Node));
@@ -111,11 +113,12 @@ int main()
                         break;
                     }
                     addToList(lexeme, current);
+                    commands[n] = lexeme;
                     // printf("Command added to list");
                 }
                 if(fork() == 0)
                 {
-                    int status_code = execvp(lexeme, arg_list);
+                    int status_code = execvp(lexeme, arguments);
                     if(status_code == -1)
                     {
                         printf("Terminated Incorrectly\n");
