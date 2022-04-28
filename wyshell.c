@@ -113,7 +113,7 @@ int main()
                         break;
                     }
                     addToList(lexeme, current);
-                    commands[n] = &lexeme;
+                    commands[n] = scanf(lexeme);
                     // printf("Command added to list");
                 }
                 if (fork() == 0)
