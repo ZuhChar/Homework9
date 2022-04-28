@@ -190,7 +190,7 @@ int main()
             {
                 break;
             }
-            if(amp == 1){
+            if(amp == 0){
                 wait(NULL);
             }
         }
