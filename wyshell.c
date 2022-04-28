@@ -180,7 +180,7 @@ int main()
             case SYSTEM_ERROR:
                 return 0;
             case AMP:
-                amp = 1;
+                amp = 0;
                 break;
             default:
                 break;
