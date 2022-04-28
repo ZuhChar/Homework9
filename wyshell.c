@@ -86,7 +86,7 @@ int main()
         int ambigOutUse = 0;
         int ambigInUse = 0;
         int eol = 0;
-        char *arguments[] = {NULL};
+        char *arguments[10] = {NULL};
         int n = 10;
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
@@ -113,7 +113,6 @@ int main()
                         break;
                     }
                     addToList(lexeme, current);
-                    commands[n] = scanf(lexeme);
                     // printf("Command added to list");
                 }
                 if (fork() == 0)
