@@ -161,7 +161,7 @@ int main()
         // Create a child to run the command in
         if (fork() == 0)
         {
-            int status_code = execvp(lexeme, arguments);
+            int status_code = execvp(current->command, arguments);
             if (status_code == -1)
             {
                 printf("Terminated Incorrectly\n");
