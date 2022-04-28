@@ -118,7 +118,7 @@ int main()
                     int status_code = execvp(lexeme, arg_list);
                     if(status_code == -1)
                     {
-                        printf("Terminated Incorrectly\n");s
+                        printf("Terminated Incorrectly\n");
                     }
                 }
                 // commands = head;
