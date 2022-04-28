@@ -114,14 +114,6 @@ int main()
                     addToList(lexeme, current);
                     // printf("Command added to list");
                 }
-                if (fork() == 0)
-                {
-                    int status_code = execvp(lexeme, arguments);
-                    if (status_code == -1)
-                    {
-                        printf("Terminated Incorrectly\n");
-                    }
-                }
                 // commands = head;
                 break;
             case REDIR_OUT:
@@ -166,7 +158,15 @@ int main()
                 break;
             }
         }
-
+        // Create a child to run the command in
+        if (fork() == 0)
+        {
+            int status_code = execvp(lexeme, arguments);
+            if (status_code == -1)
+            {
+                printf("Terminated Incorrectly\n");
+            }
+        }
         /*
             First attempt at printing the output
             commands = calloc(1, sizeof(Word));
