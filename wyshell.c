@@ -179,7 +179,7 @@ int main()
             }
         }
         // Create a child to run the command in
-        if (prevUse = 0)
+        if (prevUse == 0)
         {
             if (fork() == 0)
             {
