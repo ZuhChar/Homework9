@@ -92,7 +92,7 @@ int main()
             switch (rtn)
             {
             case WORD:
-                char *arguments[];
+                char* arguments[10];
                 int n;
                 if (Head == NULL)
                 {
