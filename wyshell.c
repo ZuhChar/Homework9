@@ -86,14 +86,14 @@ int main()
         int ambigOutUse = 0;
         int ambigInUse = 0;
         int eol = 0;
+        char *arguments[] = {NULL};
+        int n = 10;
         // current = calloc(1, sizeof(Node));
         while (rtn != EOL)
         {
             switch (rtn)
             {
             case WORD:
-                char* arguments[] = {NULL};
-                int n = 10;
                 if (Head == NULL)
                 {
                     Head = calloc(1, sizeof(Node));
@@ -116,10 +116,10 @@ int main()
                     commands[n] = lexeme;
                     // printf("Command added to list");
                 }
-                if(fork() == 0)
+                if (fork() == 0)
                 {
                     int status_code = execvp(lexeme, arguments);
-                    if(status_code == -1)
+                    if (status_code == -1)
                     {
                         printf("Terminated Incorrectly\n");
                     }
@@ -168,7 +168,7 @@ int main()
                 break;
             }
         }
-        
+
         /*
             First attempt at printing the output
             commands = calloc(1, sizeof(Word));
