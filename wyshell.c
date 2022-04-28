@@ -1,9 +1,9 @@
 //
 // wyshell.c
 // Author: Zachary Crimmel
-// Date: Apr 20, 2022
+// Date: Apr 27, 2022
 //
-// COSC 3750, Homework 8
+// COSC 3750, Homework 9
 //
 // This is a shell program that was written in c
 // Collaborated with Ian Moon on this Homework
