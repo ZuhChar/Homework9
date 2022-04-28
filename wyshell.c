@@ -185,7 +185,7 @@ int main()
             default:
                 break;
             }
-            if (amp != 0)
+            if (amp != 1)
                 {
                     wait(NULL);
                 }
