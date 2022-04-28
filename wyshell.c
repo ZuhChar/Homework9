@@ -190,8 +190,8 @@ int main()
             {
                 break;
             }
-            if(amp == 0){
-                wait(!NULL);
+            if(amp != 0){
+                wait(NULL);
             }
         }
         // Create a child to run the command in
