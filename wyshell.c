@@ -149,10 +149,6 @@ int main()
                     {
                         printf("Terminated Incorrectly\n");
                     }
-                    if (amp == 1)
-                    {
-                        return 0;
-                    }
                 }
 
                 prevUse = 1;
@@ -164,10 +160,6 @@ int main()
                     if (status_code == -1)
                     {
                         printf("Terminated Incorrectly\n");
-                    }
-                    if (amp == 1)
-                    {
-                        return 0;
                     }
                 }
 
@@ -208,7 +200,7 @@ int main()
                 }
                 if (amp != 1)
                 {
-                    return 0;
+                    pid_t stop = wait(NULL);
                 }
             }
         }
